@@ -1,9 +1,11 @@
+import { useAppSelector } from "@/redux/hooks";
+import QuizCard from "./QuizCard";
+import { QuizSummary } from "./QuizSummary";
+
 const Quiz = () => {
-  return (
-    <div>
-      <h1>This is the Quiz component</h1>
-    </div>
-  );
+  const { quizCompleted } = useAppSelector((state) => state.quiz);
+
+  return <div>{quizCompleted ? <QuizSummary /> : <QuizCard />}</div>;
 };
 
 export default Quiz;
