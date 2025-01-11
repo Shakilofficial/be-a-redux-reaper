@@ -17,7 +17,7 @@ To get started, follow these steps:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/quiz-app.git
+git clone https://github.com/Shakilofficial/be-a-redux-reaper/tree/quiz
 ```
 
 2. Install the dependencies:
