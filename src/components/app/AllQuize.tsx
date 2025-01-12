@@ -5,11 +5,11 @@ import {
 import { QuizData, setQuiz, TQuiz } from "@/redux/features/quiz/quizSlice";
 import { useAppDispatch } from "@/redux/hooks";
 import { SquarePen, Trash2 } from "lucide-react";
-import { toast } from "react-hot-toast";
+import { toast } from "sonner";
 import { Button } from "../ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Loader } from "./Loader";
-import { QuizModal } from "./QuizModal";
+import QuizModal from "./QuizModal";
 
 const AllQuiz = () => {
   const dispatch = useAppDispatch();

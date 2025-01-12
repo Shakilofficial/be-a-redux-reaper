@@ -5,9 +5,11 @@ const quizApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "https://quiz-api-puce.vercel.app/api",
   }),
+  tagTypes: ["Quiz"],
   endpoints: (builder) => ({
     getAllQuizzes: builder.query({
       query: () => "/quizzes",
+      providesTags: ["Quiz"],
     }),
     getQuiz: builder.query({
       query: (id) => `/quizzes/${id}`,
@@ -18,19 +20,22 @@ const quizApi = createApi({
         method: "POST",
         body: quiz,
       }),
+      invalidatesTags: ["Quiz"],
     }),
     updateQuiz: builder.mutation({
       query: ({ id, ...quiz }) => ({
         url: `/quizzes/${id}`,
-        method: "PUT",
+        method: "PATCH",
         body: quiz,
       }),
+      invalidatesTags: ["Quiz"],
     }),
     deleteQuiz: builder.mutation({
       query: (id) => ({
         url: `/quizzes/${id}`,
         method: "DELETE",
       }),
+      invalidatesTags: ["Quiz"],
     }),
   }),
 });
