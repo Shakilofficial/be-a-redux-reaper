@@ -28,7 +28,7 @@ This is a quiz app built with React, Redux, and Tailwind CSS.
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Shakilofficial/be-a-redux-reaper/tree/quiz
+git clone https://github.com/Shakilofficial/be-a-redux-reaper/tree/quiz-rtk
 ```
 
 2. Install the dependencies:
@@ -52,7 +52,7 @@ To get started, follow these steps:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Shakilofficial/be-a-redux-reaper/tree/quiz
+git clone https://github.com/Shakilofficial/be-a-redux-reaper/tree/quiz-rtk
 ```
 
 2. Install the dependencies:
