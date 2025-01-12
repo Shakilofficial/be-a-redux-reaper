@@ -23,6 +23,30 @@ This is a quiz app built with React, Redux, and Tailwind CSS.
 
 ## Getting Started
 
+### Configure backend
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Shakilofficial/be-a-redux-reaper/tree/quiz
+```
+
+2. Install the dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
+
+```bash
+npm run dev
+```
+
+4. Open your browser and navigate to `http://localhost:5000`.
+
+
+### Configure frontend
 To get started, follow these steps:
 
 1. Clone the repository:
@@ -52,3 +76,4 @@ Contributions are welcome! If you find a bug or have a suggestion, please open a
 ## License
 
 This project is licensed under the MIT License.
+
