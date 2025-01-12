@@ -9,8 +9,22 @@ interface QuizState {
   quizCompleted: boolean;
 }
 
+export interface QuizData {
+  question: string;
+  options: string[];
+  correctAnswer: string;
+}
+export type TQuiz = {
+  _id: string;
+  title: string;
+  description: string;
+  questions: QuizData[];
+  createdAt: Date;
+  updatedAt: Date;
+};
+
 const initialState: QuizState = {
-  quizes: quizData,
+  quizes: [],
   currentQuizIndex: 0,
   userAnswers: Array(quizData.length).fill(null),
   quizCompleted: false,
@@ -32,6 +46,9 @@ const quizSlice = createSlice({
     completeQuiz: (state) => {
       state.quizCompleted = true;
     },
+    setQuiz: (state, action) => {
+      state.quizes = action.payload;
+    },
   },
 });
 
@@ -44,6 +61,6 @@ export const selectCurrentAnswer = (state: RootState) =>
 export const selectQuizCompleted = (state: RootState) =>
   state.quiz.quizCompleted;
 
-export const { setAnswer, nextQuiz, prevQuiz, completeQuiz } =
+export const { setAnswer, nextQuiz, prevQuiz, completeQuiz, setQuiz } =
   quizSlice.actions;
 export default quizSlice.reducer;
